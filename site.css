@@ -87,11 +87,11 @@ ul {
     background: var(--main-blue);
 }
 .contact-section {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
     width: 100%;
     height: 80vh;
     padding: 0 2rem;
@@ -105,13 +105,25 @@ ul {
     margin-top: 4rem;
     flex-wrap: wrap;
 }
-.contact-details {
-    align-items: center;
-    display: flex;
+.btn-contact-details-git {
     justify-content: center;
+    text-align: center;
     font-size: 2.4rem;
-    transition: transform 0.3s ease-out;
     color: #ad162a;
+    position:absolute;
+    justify-content: center;
+    padding-left: 40rem;
+}
+
+.btn-contact-details-mail {
+    justify-content: center;
+    text-align: center;
+    font-size: 2.4rem;
+    color: #ad162a;
+    position:absolute;
+    justify-content: center;
+    padding-left: 20rem;
+    padding-bottom: -20rem
 }
 @media only screen and (max-width: 1000px) {
  body {
@@ -131,14 +143,49 @@ h3 {
 .project-image {
     width: 800px;
     border-radius: 9px;
+    box-shadow: 5px 5px 20px blue;
 }
 
 .project-image2 {
     width: 800px;
     border-radius: 9px;
+    box-shadow: 5px 5px 20px rgb(255, 230, 0);
 }
 
 .project-image3 {
     width: 800px;
     border-radius: 9px;
+    box-shadow: 5px 5px 20px rgb(210, 210, 219);
+}
+
+.project-image4 {
+    width: 800px;
+    border-radius: 9px;
+    box-shadow: 5px 5px 20px rgba(114, 190, 32, 0.601);
+}
+
+.project-title {
+    font-weight: 900;
+}
+
+.project-title2 {
+    font-weight: 900;
+}
+
+.project-title3 {
+    font-weight: 900;
+}
+
+.project-title4 {
+    font-weight: 900;
+}
+
+.pulse:hover, 
+.pulse:focus {
+  animation: pulse 1s;
+  box-shadow: 0 0 0 2em transparent;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 var(--hover); }
 }
