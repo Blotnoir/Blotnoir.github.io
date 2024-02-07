@@ -162,7 +162,7 @@ h4 {
 }
 
 .project-image:hover {
-    animation: pulse .6s;
+    animation: pulse .3s;
     box-shadow: 5px 5px 50px blue;
 }
 
@@ -172,7 +172,7 @@ h4 {
 }
 
 .project-image2:hover {
-    animation: pulse .6s;
+    animation: pulse .3s;
     box-shadow: 5px 5px 50px rgb(255, 230, 0);
 }
 
@@ -182,7 +182,7 @@ h4 {
 }
 
 .project-image3:hover {
-    animation: pulse .6s;
+    animation: pulse .3s;
     box-shadow: 5px 5px 50px rgb(208, 215, 208);
 }
 
@@ -193,7 +193,7 @@ h4 {
 }
 
 .project-image4:hover {
-    animation: pulse .6s;
+    animation: pulse .3s;
     box-shadow: 5px 5px 50px green;
 }
 
