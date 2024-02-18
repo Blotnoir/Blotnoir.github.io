@@ -1,0 +1,300 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;1,500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+
+body {
+  background: linear-gradient(gray, black);
+  height: 100vh;
+  font-size: calc(14px + 12 * (100vw - 300px) / 1300);
+  font-family: "DM Mono", monospace;
+  font-weight: 300;
+  overflow-x: hidden;
+  color: white;
+  text-align: center;
+}
+
+#title {
+  margin-top: 60rem;
+  margin-bottom: 35rem;
+}
+
+#about {
+  text-shadow: 2px 2px black;
+  padding-right: 2rem;
+  text-decoration: none;
+  color: white;
+}
+
+#portfolio {
+  padding-right: 2rem;
+  text-decoration: none;
+  color: white;
+}
+
+#contact {
+  text-shadow: 2px 2px black;
+  text-decoration: none;
+  color: white;
+}
+
+
+.nav {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  display: flexbox;
+  background-color: #000000;
+  color: white;
+  padding: 10px;
+}
+
+
+.nav a:hover  {
+  transition: all .2s ease-in;
+  color: #000000;
+  background-color: rgb(86, 94, 94);
+  border-radius: 10px;
+}
+
+.nav > a {
+  color: white;
+  text-decoration: none;
+  padding-left: 10px;
+  margin-right: 20px;
+  position: static;
+}
+
+.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  border-radius: 6px;
+  display: none;
+  position: absolute;
+  background-color: #912222;
+  box-shadow: 0 8px 16px rgb(0, 0, 0);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  border-radius: 6px;
+  border-bottom: 1px solid black;
+  color: white;
+  padding: 10px;
+  display: block;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  background-color: #d00505;
+  border-radius: 8px;
+}
+
+h1 {
+  padding-top: 50rem;
+  font-size: 2em;
+  margin-bottom: 0.2em;
+}
+
+h2 {
+  display: inline;
+  font-size: 2em;
+  padding-bottom: 20rem;
+}
+
+.projects-section-header {
+  margin-bottom: 3rem;
+  font-size: 3rem;
+  text-decoration: underline;
+}
+
+.project-title {
+  margin-bottom: 4rem;
+  text-decoration: none;
+  color: white;
+}
+
+.project-image {
+  border-radius: 5px;
+  max-width: 30%;
+  max-height: 30%
+}
+
+.project-image:hover {
+  animation: ease .3s;
+  box-shadow: 5px 5px 40px blue;
+}
+
+#drumpad-photo:hover {
+  animation: ease .4s;
+  box-shadow: 5px 5px 40px yellow;
+}
+
+#superhero-photo:hover {
+  animation: ease .4s;
+  box-shadow: 5px 5px 40px green;
+}
+
+#todo-photo:hover {
+  animation: ease .4s;
+  box-shadow: 5px 5px 40px gray;
+}
+
+.main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+.main:before, .main:after {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -3;
+}
+.main:before {
+  right: 0;
+  bottom: -19;
+  height: 30em;
+  width: 30em;
+  border-radius: 30em;
+  background: linear-gradient(rgb(43, 22, 117), black);
+  align-self: flex-end;
+  animation: gradient-fade 8s ease-in-out 3s infinite alternate;
+}
+.main:after {
+  top: 0;
+  left: 30;
+  height: 10em;
+  width: 10em;
+  border-radius: 10em;
+  background: linear-gradient(gray, black);
+  animation: gradient-fade-alt 6s ease-in-out 3s infinite alternate;
+}
+.main__text-wrapper {
+  position: relative;
+  padding: 2em;
+}
+.main__text-wrapper:before, .main__text-wrapper:after {
+  content: "";
+  display: block;
+  position: absolute;
+}
+.main__text-wrapper:before {
+  z-index: -1;
+  top: -3em;
+  right: -3em;
+  width: 13em;
+  height: 13em;
+  opacity: 0.7;
+  border-radius: 13em;
+  background: linear-gradient(#15e0ff, black);
+  animation: rotation 7s linear infinite;
+}
+.main__text-wrapper:after {
+  z-index: -1;
+  bottom: -20em;
+  width: 20em;
+  height: 20em;
+  border-radius: 20em;
+  background: linear-gradient(maroon, black);
+  animation: rotation 7s linear infinite;
+}
+
+.arrow {
+  z-index: 1000;
+  opacity: 0.5;
+  position: absolute;
+}
+.arrow--top {
+  top: 0;
+  left: -5em;
+}
+.arrow--bottom {
+  bottom: 0;
+  right: 3em;
+}
+
+.circle {
+  transform: translate(50%, -50%) rotate(0deg);
+  transform-origin: center;
+}
+.circle--ltblue {
+  height: 20em;
+  width: 20em;
+  border-radius: 20em;
+  background: linear-gradient(#15e0ff, gray);
+}
+
+.backdrop {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  background-color: pink;
+}
+
+.dotted-circle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0.3;
+  animation: rotation 38s linear infinite;
+}
+
+.draw-in {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 10;
+  animation: draw 15s ease-in-out alternate infinite;
+}
+
+@keyframes draw {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+.item-to {
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  transform-origin: bottom;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes gradient-fade {
+  from {
+    transform: translate(10%, -10%) rotate(0deg);
+  }
+  to {
+    transform: translate(50%, -50%) rotate(360deg);
+  }
+}
+@keyframes gradient-fade-alt {
+  from {
+    transform: translate(-20%, 20%) rotate(0deg);
+  }
+  to {
+    transform: translate(-60%, 60%) rotate(360deg);
+  }
+}/*# sourceMappingURL=styles.css.map */
